@@ -17,4 +17,4 @@ const legos = new Schema({
 
 const legosModel = model('Lego', legos)
 
-export {legosModel}
+export {legosModel}   
