@@ -41,50 +41,5 @@ const buscarlegos = async (req, res) => {
     }
 }
 
-const atualizarLegos = (req, res) => {
-    const { id } = req.params;
-    const { nome, pecas, preco } = req.body;
 
-    const lego = legos.find((a) => a.id === id)
-
-    if (!nome || !pecas || !preco) {
-        return res.json({
-            erro: true,
-            mensagem: 'falta informaçao'
-        })
-    }
-    legos.nome = nome;
-    legos.pecas = pecas;
-    legos.preco = preco;
-
-    res.json({
-        erro: false,
-        mensagem: "alterado",
-        legos
-
-    })
-}
-
-const deletar = async (req, res) => {
-
-try {
-    const {id} = req.params;
-const lego = await legosModel.findByIdAndDelete(id)
-
-if(!lego){
-    res.json({
-        erro: true,
-        mensagem: 'nao encontrado' 
-    })
-}
-} catch (error) {
-    res.json({
-        erro: true,
-        mensagem: "nao encontrado"
-    })
-}
-
-
-}; 
-
-export { addLego, buscarlegos, atualizarLegos, deletar};
+export { addLego, buscarlegos};

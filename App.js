@@ -7,6 +7,7 @@ app.use(express.json())
 
 app.use('/lego', Legorouter)
 
+
 mongoose.connect('mongodb://localhost:27017/legosPtas').then(()=>{
     console.log("conectou")
 }).catch(err => {
