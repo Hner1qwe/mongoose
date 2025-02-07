@@ -67,6 +67,7 @@ const listarlegos = async (req, res) => {
 
 }
 
+
 //metodo put... demorei muito pra pensar como fazer esse mas no geral só foram algumas tentativas sem usar o findById
 // criei a função finder para ser mais facil de encontrar os itens 
 const atualizar = async (req, res) => {

@@ -1,6 +1,7 @@
 import express from 'express'
 
 const Legorouter = express.Router();
+
 import {addLego, buscarlegos, listarlegos, atualizar, deletarLego} from '../controller/legoController.js'
 
 
@@ -9,5 +10,7 @@ Legorouter.get('/:id', buscarlegos)
 Legorouter.get('/', listarlegos)
 Legorouter.put('/:id', atualizar)
 Legorouter.delete('/:id', deletarLego)
+Legorouter.post('/', addLego)
+Legorouter.get('/', buscarlegos)
 
 export{Legorouter}
